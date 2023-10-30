@@ -15,6 +15,8 @@
 ## 브랜치 개요
 
 1. `cart-domain`
+2. `react-query-test`
+
    ... 그 외에도 계속.
 
 ---
@@ -28,6 +30,12 @@
   - 분리된 비즈니스 로직은 한번의 테스트로도 견고하고 완성도 있는 프로젝트를 제공한다.
   - [예제코드 보기](https://github.com/hansolbangul/nextjs-testcode-study/tree/cart-domain)
 
+### `react-query-test`
+
+- **설명**: react-query 목업 테스트 코드 작성법
+  - react-query 를 어떻게 테스트할 수 있는지 예제 코드를 작성한다.
+  - [예제코드 보기](https://github.com/hansolbangul/nextjs-testcode-study/tree/react-query-test)
+
 ... 모든 브랜치에 대해 계속.
 
 ---
@@ -36,6 +44,8 @@
 
 - **`cart-domain`**:
   - [React / TS 도메인 로직 테스트 코드](https://bangul-log.vercel.app/post/nextjs-testcode-step1)
+- **`react-query-test`**:
+  - [React-Query 로직 테스트 코드](https://bangul-log.vercel.app/post/nextjs-testcode-step2)
 
 ... 모든 브랜치에 대해 계속.
 
