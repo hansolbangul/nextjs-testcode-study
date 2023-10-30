@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "react-query";
-import { render } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import Home from "./page";
 import photoQuery from "@/apis/query/photos.query";
 
@@ -103,6 +103,17 @@ describe("<Home /> 테스트", () => {
     });
 
     expect(title).toHaveTextContent("랜덤 사진");
+  });
+  it("로딩 상태 확인", () => {
+    photoQuery.getRandomPhotosQuery = jest.fn().mockReturnValue({
+      isLoading: true,
+    });
+
+    const client = new QueryClient();
+
+    const { getByText } = render(renderProviderComponent({ children: <Home />, client }));
+
+    expect(getByText("loading")).toBeInTheDocument();
   });
   it("10개가 맞는지.", () => {
     photoQuery.getRandomPhotosQuery = jest.fn().mockReturnValue({

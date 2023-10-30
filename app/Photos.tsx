@@ -13,7 +13,17 @@ const PhotoItem = ({ photo }: { photo: Photo }) => {
 };
 
 const Photos = () => {
-  const { data: photos } = photoQuery.getRandomPhotosQuery();
+  const { data: photos, isLoading, refetch } = photoQuery.getRandomPhotosQuery();
+
+  if (isLoading)
+    return (
+      <>
+        <div>loading</div>{" "}
+        <button type="button" onClick={() => refetch()}>
+          refetch
+        </button>
+      </>
+    );
 
   return (
     <div className="max-w-3xl grid grid-cols-3 gap-3">
